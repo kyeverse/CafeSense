@@ -1317,6 +1317,22 @@ select:focus-visible {
 
 /* PRODUCT NAME */
 
+.product-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-table-thumb {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    background-color: #f7eee7;
+    flex-shrink: 0;
+}
+
 .product-name {
     font-weight: 700;
     color: var(--text-dark);

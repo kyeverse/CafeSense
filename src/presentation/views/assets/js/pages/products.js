@@ -10,6 +10,7 @@
 
 import { productApi } from "../api/productApi.js";
 import { apiClient } from "../api/apiClient.js";
+import { getProductImageUrl } from "../utils/productImage.js";
 
 const LOW_STOCK_LIMIT = 10;
 const SIDEBAR_STORAGE_KEY = "cafeSenseSidebarCollapsed";
@@ -969,9 +970,12 @@ function displayProducts() {
             </td>
 
             <td>
-                <span class="product-name">
-                    ${escapeHTML(product.name)}
-                </span>
+                <div class="product-name-cell">
+                    <img class="product-table-thumb" src="${getProductImageUrl(product)}" alt="${escapeHTML(product.name)}" loading="lazy">
+                    <span class="product-name">
+                        ${escapeHTML(product.name)}
+                    </span>
+                </div>
             </td>
 
             <td>

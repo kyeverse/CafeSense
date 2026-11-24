@@ -2,6 +2,7 @@
 import { transactionApi } from '../api/transactionApi.js';
 import { productApi } from '../api/productApi.js';
 import { apiClient } from '../api/apiClient.js';
+import { getProductImageUrl } from '../utils/productImage.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
 
@@ -825,7 +826,7 @@ function getProductIcon(product) {
                 >
 
                     <div class="product-image">
-                        <span>${getProductIcon(product)}</span>
+                        <img src="${getProductImageUrl(product)}" alt="${escapeHTML(product.name)}" loading="lazy">
                     </div>
 
                     <div class="product-info">
